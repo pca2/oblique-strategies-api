@@ -163,8 +163,6 @@ if Thing.count == 0
     end
   end
 
-
-
   # Thing.create(:edition => 1, :strategy => "Abandon normal instruments")
   # Thing.create(:edition => 2, :strategy => "A line has two sides")
   # Thing.create(:edition => 2, :strategy => "Balance the consistency principle with the inconsistency principle")
