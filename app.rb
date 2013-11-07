@@ -50,7 +50,7 @@ get '/edition/:edition/all' do
   else
     halt 404
   end
-endend
+end
 
 get '/edition/:edition/draw' do
   content_type :json
