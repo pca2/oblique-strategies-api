@@ -45,8 +45,8 @@ get '/edition/:edition/all' do
   content_type :json
   @things = Thing.all(:edition => params[:edition].to_i)
 
-  if @thing
-    @thing.to_json
+  if @things
+    @things.to_json
   else
     halt 404
   end
@@ -109,7 +109,7 @@ end
 # READ: Route to show a specific Thing based on its `id`
 get '/id/:id' do
   content_type :json
-  @thing = Thing.get(params[:id])
+  @thing = Thing.first(:id => params[:id].to_i)
 
   if @thing
     @thing.to_json
