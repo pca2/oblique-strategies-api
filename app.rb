@@ -29,8 +29,8 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 get '/' do
-  send_file './public/index.html'
-  # haml :index
+  # send_file './public/index.html'
+  haml :index
 end
 
 # Route to show all Things, ordered like a blog
@@ -45,16 +45,24 @@ get '/edition/:edition/all' do
   content_type :json
   @things = Thing.all(:edition => params[:edition].to_i)
 
-  @things.to_json
-end
+  if @thing
+    @thing.to_json
+  else
+    halt 404
+  end
+endend
 
 get '/edition/:edition/draw' do
   content_type :json
   @things = Thing.all(:edition => params[:edition].to_i)
   @thing = @things.first(:offset => rand(@things.count))
 
-  @thing.to_json
-end
+  if @thing
+    @thing.to_json
+  else
+    halt 404
+  end
+endend
 
 get '/draw' do
   content_type :json
@@ -86,7 +94,20 @@ end
 
 
 # READ: Route to show a specific Thing based on its `id`
-get '/things/:id' do
+get '/edition/:edition/cardnumber/:cardnumber' do
+  content_type :json
+  @thing = Thing.first(:edition => params[:edition].to_i, :cardnumber => params[:cardnumber].to_i)
+
+  if @thing
+    @thing.to_json
+  else
+    halt 404
+  end
+end
+
+
+# READ: Route to show a specific Thing based on its `id`
+get '/id/:id' do
   content_type :json
   @thing = Thing.get(params[:id])
 
