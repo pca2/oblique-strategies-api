@@ -7,7 +7,7 @@ Bundler.require
 # set, when working locally this line will fall back to using SQLite in the
 # current directory.
 # DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite://#{Dir.pwd}/development.sqlite")
-DataMapper.setup(:default, ENV['DATABASE_URL')
+DataMapper.setup(:default, ENV['DATABASE_URL'])
 
 # Define a simple DataMapper model.
 class Thing
