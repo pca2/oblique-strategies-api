@@ -134,21 +134,21 @@ end
 # If there are no Things in the database, add a few.
 if Thing.count == 0
   # add things from txt file / csv / whatever
-  (1..4).each do |edition|
-    index = 1
-    File.open("./editions/" + edition.to_s, "r").each_line do |line|
-      Thing.create(:edition => edition, :strategy => line.chomp, :cardnumber => index)
-      index += 1
-    end
-  end
+  # (1..4).each do |edition|
+  #   index = 1
+  #   File.open("./editions/" + edition.to_s, "r").each_line do |line|
+  #     Thing.create(:edition => edition, :strategy => line.chomp, :cardnumber => index)
+  #     index += 1
+  #   end
+  # end
 
 
 
-  # Thing.create(:edition => 1, :text => "Abandon normal instruments")
-  # Thing.create(:edition => 2, :text => "A line has two sides")
-  # Thing.create(:edition => 2, :text => "Balance the consistency principle with the inconsistency principle")
-  # Thing.create(:edition => 2, :text => "Change nothing and continue with immaculate consistency")
-  # Thing.create(:edition => 3, :text => "Allow an easement (an easement is the abandonment of a stricture)")
+  Thing.create(:edition => 1, :text => "Abandon normal instruments")
+  Thing.create(:edition => 2, :text => "A line has two sides")
+  Thing.create(:edition => 2, :text => "Balance the consistency principle with the inconsistency principle")
+  Thing.create(:edition => 2, :text => "Change nothing and continue with immaculate consistency")
+  Thing.create(:edition => 3, :text => "Allow an easement (an easement is the abandonment of a stricture)")
 
   # Thing.create(:title => "Test Thing One", :description => "Sometimes I eat pizza.")
   # Thing.create(:title => "Test Thing Two", :description => "Other times I eat cookies.")
