@@ -144,11 +144,11 @@ if Thing.count == 0
 
 
 
-  Thing.create(:edition => 1, :text => "Abandon normal instruments")
-  Thing.create(:edition => 2, :text => "A line has two sides")
-  Thing.create(:edition => 2, :text => "Balance the consistency principle with the inconsistency principle")
-  Thing.create(:edition => 2, :text => "Change nothing and continue with immaculate consistency")
-  Thing.create(:edition => 3, :text => "Allow an easement (an easement is the abandonment of a stricture)")
+  Thing.create(:edition => 1, :strategy => "Abandon normal instruments")
+  Thing.create(:edition => 2, :strategy => "A line has two sides")
+  Thing.create(:edition => 2, :strategy => "Balance the consistency principle with the inconsistency principle")
+  Thing.create(:edition => 2, :strategy => "Change nothing and continue with immaculate consistency")
+  Thing.create(:edition => 3, :strategy => "Allow an easement (an easement is the abandonment of a stricture)")
 
   # Thing.create(:title => "Test Thing One", :description => "Sometimes I eat pizza.")
   # Thing.create(:title => "Test Thing Two", :description => "Other times I eat cookies.")
