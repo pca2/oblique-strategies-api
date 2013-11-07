@@ -6,7 +6,8 @@ Bundler.require
 # Setup DataMapper with a database URL. On Heroku, ENV['DATABASE_URL'] will be
 # set, when working locally this line will fall back to using SQLite in the
 # current directory.
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite://#{Dir.pwd}/development.sqlite")
+# DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite://#{Dir.pwd}/development.sqlite")
+DataMapper.setup(:default, ENV['DATABASE_URL')
 
 # Define a simple DataMapper model.
 class Thing
@@ -63,25 +64,25 @@ get '/draw' do
   @thing.to_json
 end
 
-# # CREATE: Route to create a new Thing
-# post '/things' do
-#   content_type :json
+# CREATE: Route to create a new Thing
+post '/' do
+  content_type :json
 
-#   # These next commented lines are for if you are using Backbone.js
-#   # JSON is sent in the body of the http request. We need to parse the body
-#   # from a string into JSON
-#   # params_json = JSON.parse(request.body.read)
+  # These next commented lines are for if you are using Backbone.js
+  # JSON is sent in the body of the http request. We need to parse the body
+  # from a string into JSON
+  # params_json = JSON.parse(request.body.read)
 
-#   # If you are using jQuery's ajax functions, the data goes through in the
-#   # params.
-#   @thing = Thing.new(params)
+  # If you are using jQuery's ajax functions, the data goes through in the
+  # params.
+  @thing = Thing.new(params)
 
-#   if @thing.save
-#     @thing.to_json
-#   else
-#     halt 500
-#   end
-# end
+  if @thing.save
+    @thing.to_json
+  else
+    halt 500
+  end
+end
 
 
 # READ: Route to show a specific Thing based on its `id`
