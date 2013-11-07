@@ -62,7 +62,7 @@ get '/edition/:edition/draw' do
   else
     halt 404
   end
-endend
+end
 
 get '/draw' do
   content_type :json
@@ -171,5 +171,4 @@ if Thing.count == 0
 
   # Thing.create(:title => "Test Thing One", :description => "Sometimes I eat pizza.")
   # Thing.create(:title => "Test Thing Two", :description => "Other times I eat cookies.")
-end
 end
