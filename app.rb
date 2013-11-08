@@ -28,10 +28,10 @@ DataMapper.finalize
 # Tell DataMapper to update the database according to the definitions above.
 DataMapper.auto_upgrade!
 
-get '/stylesheets/style.css' do
-  content_type 'text/css', :charset => 'utf-8'
-  sass :style
-end
+# get '/stylesheets/style.css' do
+#   content_type 'text/css', :charset => 'utf-8'
+#   sass :style
+# end
 
 get '/' do
   # send_file './public/index.html'
