@@ -29,6 +29,7 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 get '/stylesheets/style.css' do
+  content_type 'text/css', :charset => 'utf-8'
   sass :style
 end
 
