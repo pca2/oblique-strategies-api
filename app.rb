@@ -72,7 +72,7 @@ end
 get '/edition/:edition/card' do
   @things = Thing.all(:edition => params[:edition].to_i)
   @thing = @things.first(:offset => rand(@things.count))
-
+  @edition = params[:edition]
   if @thing
     haml :card
   else
@@ -91,7 +91,7 @@ end
 get '/' do
   @things = Thing.all()
   @thing = @things.first(:offset => rand(@things.count))
-
+  @edition = "all"
   haml :card
 end
 

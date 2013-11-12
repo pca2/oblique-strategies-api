@@ -14,4 +14,24 @@
 			%a{:href => "/info"} 
 				information / api / credits
 		%p 
-			edition: <a href="/">all</a> <a href="/edition/1/card">1</a> <a href="/edition/2/card">2</a> <a href="/edition/3/card">3</a> <a href="/edition/4/card">4</a>
+			edition: 
+			- if @edition == "all"
+				all
+			- else
+				<a href="/">all</a>
+			- if @edition == "1"
+				1
+			- else
+				<a href="/edition/1/card">1</a>
+			- if @edition == "2"
+				2
+			- else
+				<a href="/edition/2/card">2</a>
+			- if @edition == "3"
+				3
+			- else
+				<a href="/edition/3/card">3</a>
+			- if @edition == "4"
+				4
+			- else
+				<a href="/edition/4/card">4</a>
