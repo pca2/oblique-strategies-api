@@ -69,6 +69,17 @@ get '/edition/:edition/draw' do
   end
 end
 
+get '/edition/:edition/card' do
+  @things = Thing.all(:edition => params[:edition].to_i)
+  @thing = @things.first(:offset => rand(@things.count))
+
+  if @thing
+    haml :card
+  else
+    halt 404
+  end
+end
+
 get '/draw' do
   content_type :json
   @things = Thing.all()
