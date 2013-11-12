@@ -7,7 +7,7 @@
 	.six.columns.offset-by-five.footer
 		%p 
 			edition
-			= "#" + @thing.edition.to_s + ", "
+			= @thing.edition.to_s + ", "
 			card
 			= "#" + @thing.cardnumber.to_s
 		%p 
