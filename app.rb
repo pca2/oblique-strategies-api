@@ -77,6 +77,13 @@ get '/draw' do
   @thing.to_json
 end
 
+get '/card' do
+  @things = Thing.all()
+  @thing = @things.first(:offset => rand(@things.count))
+
+  haml :card
+end
+
 # CREATE: Route to create a new Thing
 post '/' do
   content_type :json
