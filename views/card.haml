@@ -11,9 +11,6 @@
 			card
 			= "#" + @thing.cardnumber.to_s
 		%p 
-			%a{:href => "/info"} 
-				information / api / credits
-		%p 
 			edition: 
 			- if @edition == "all"
 				all
@@ -35,3 +32,6 @@
 				4
 			- else
 				<a href="/edition/4/card">4</a>
+		%p 
+			%a{:href => "/info"} 
+				information / api / credits
