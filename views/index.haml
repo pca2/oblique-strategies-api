@@ -1,6 +1,6 @@
 .container
 	.three.columns.sidebar		
-		%h3 Credits
+		%h2 Credits
 		%p 
 			Oblique Strategies by 
 			%a{:href => "http://en.wikipedia.org/wiki/Brian_Eno"} Brian Eno
@@ -21,30 +21,42 @@
 			Code on
 			%a{:href => "https://github.com/andrewjmonks/oblique-strategies-api"} Github
 	.twelve.columns.offset-by-one.content
-		%h1 Oblique Strategies JSON API
-		%p
-			This is a JSON API to deliver 
-			%a{:href => "http://en.wikipedia.org/wiki/Brian_Eno"} Brian Eno
-			and
-			%a{:href => "http://en.wikipedia.org/wiki/Peter_Schmidt_(artist)"} Peter Schmidt's
-			%a{:href => "http://en.wikipedia.org/wiki/Oblique_Strategies"} Oblique Strategies.
+		%h1 Oblique Strategies API
+		%h2 Info
+		%p 
+			<a href="http://brianeno.needsyourhelp.org">The Oblique Strategies JSON API</a> brings modern web standards and data accessibility practices to <a href="http://en.wikipedia.org/wiki/Brian_Eno">Brian Eno</a> and <a href="http://en.wikipedia.org/wiki/Peter_Schmidt_(artist)">Peter Schmidt&#8127;s</a> classic Oblique Strategies.
+		%p 
+			First published in 1975, the <a href="http://en.wikipedia.org/wiki/Oblique_Strategies">Oblique Strategies</a> are a collection of brief aphorisms meant to stimulate creativity. Such as &ldquo;Give way to your worst impulse,&rdquo; &ldquo;Question the heroic approach,&rdquo; and &ldquo;Work at a different speed.&rdquo;
+		%p 
+			By making these strategies accessible in a machine-readable form, the Oblique Strategies JSON API makes it possible for programmers to readily include these Oblique Strategies in their work.
+		%p 
+			More subtly, it addresses a conversation about machine creativity, which I first addressed with the <a href="http://lyrics.gy">Lyrics Generator</a>. How might a computer&#8127;s creativity resemble human creativity? What happens when a computer gets writers block? Would a computer consult the Oblique Strategies?
 		%h2 Example queries
 		%ul 
 			%li
+				%a{:href => "/"} /
+				&mdash; Draw one random card to HTML.
+			%li
+				%a{:href => "/edition/1/card"} /edition/1/card
+				&mdash; Draw one random first edition card to HTML.
+			%li
 				%a{:href => "/all"} /all
-				&mdash; All cards.
+				&mdash; All cards to JSON.
+			%li
+				%a{:href => "/all"} /all
+				&mdash; All cards to JSON.
 			%li
 				%a{:href => "/draw"} /draw
-				&mdash; Draw one card.
+				&mdash; Draw one card to JSON.
 			%li
 				%a{:href => "/edition/3/all"} /edition/3/all
-				&mdash; All third edition cards.
+				&mdash; All third edition cards to JSON.
 			%li
 				%a{:href => "/edition/3/draw"} /edition/3/draw
-				&mdash; Draw one random third edition card.
+				&mdash; Draw one random third edition card to JSON.
 			%li
 				%a{:href => "/edition/3/cardnumber/5"} /edition/1/cardnumber/5
-				&mdash; First card from the first edition.
+				&mdash; First card from the first edition to JSON.
 			%li
 				%a{:href => "/id/9"} /id/9
-				&mdash; Card with id of 9.
+				&mdash; Card with id of 9 to JSON.
