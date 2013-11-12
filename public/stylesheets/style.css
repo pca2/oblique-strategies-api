@@ -3,11 +3,18 @@
 }
 
 h3 {
-	margin-bottom: 20px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	letter-spacing: -1px;
-	font-weight: bold;
+		margin-bottom: 20px;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		letter-spacing: -1px;
+		font-weight: bold;
 }
-a {
-	font-weight: bold;
+
+.container.cardpage {
+	background-color: #000000;
+}
+
+.card {
+	background-color: #ffffff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
 }
