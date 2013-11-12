@@ -6,10 +6,10 @@
 					= @thing.strategy
 	.six.columns.offset-by-five.footer
 		%p 
-			edition #
-			= @thing.edition.to_s + ", "
+			edition
+			= "#" + @thing.edition.to_s + ", "
 			card #
-			= @thing.cardnumber
+			= "#" + @thing.cardnumber.to_s
 		%p 
 			%a{:href => "/info"} 
-				More information
+				information / credits
