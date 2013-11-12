@@ -1,49 +1,50 @@
-.three.columns.sidebar		
-	%h3 Credits
-	%p 
-		Oblique Strategies by 
-		%a{:href => "http://en.wikipedia.org/wiki/Brian_Eno"} Brian Eno
-		and
-		%a{:href => "http://en.wikipedia.org/wiki/Peter_Schmidt_(artist)"} Peter Schmidt
-	%p
-		Data from
-		%a{:href => "http://www.rtqe.net/ObliqueStrategies/"} The Oblique Strategies Website
-	%p 
-		API made with
-		%a{:href => "http://www.sinatrarb.com/"} Sinatra
-		by
-		%a{:href => "http://monks.co"} Andrew Monks
-	%p 
-		Hosted with
-		%a{:href => "https://www.heroku.com"} Heroku
-	%p 
-		Code on
-		%a{:href => "https://github.com/andrewjmonks/oblique-strategies-api"} Github
-.twelve.columns.offset-by-one.content
-	%h1 Oblique Strategies JSON API
-	%p
-		This is a JSON API to deliver 
-		%a{:href => "http://en.wikipedia.org/wiki/Brian_Eno"} Brian Eno
-		and
-		%a{:href => "http://en.wikipedia.org/wiki/Peter_Schmidt_(artist)"} Peter Schmidt's
-		%a{:href => "http://en.wikipedia.org/wiki/Oblique_Strategies"} Oblique Strategies.
-	%h2 Example queries
-	%ul 
-		%li
-			%a{:href => "/all"} /all
-			&mdash; All cards.
-		%li
-			%a{:href => "/draw"} /draw
-			&mdash; Draw one card.
-		%li
-			%a{:href => "/edition/3/all"} /edition/3/all
-			&mdash; All third edition cards.
-		%li
-			%a{:href => "/edition/3/draw"} /edition/3/draw
-			&mdash; Draw one random third edition card.
-		%li
-			%a{:href => "/edition/3/cardnumber/5"} /edition/1/cardnumber/5
-			&mdash; First card from the first edition.
-		%li
-			%a{:href => "/id/9"} /id/9
-			&mdash; Card with id of 9.
+.container
+	.three.columns.sidebar		
+		%h3 Credits
+		%p 
+			Oblique Strategies by 
+			%a{:href => "http://en.wikipedia.org/wiki/Brian_Eno"} Brian Eno
+			and
+			%a{:href => "http://en.wikipedia.org/wiki/Peter_Schmidt_(artist)"} Peter Schmidt
+		%p
+			Data from
+			%a{:href => "http://www.rtqe.net/ObliqueStrategies/"} The Oblique Strategies Website
+		%p 
+			API made with
+			%a{:href => "http://www.sinatrarb.com/"} Sinatra
+			by
+			%a{:href => "http://monks.co"} Andrew Monks
+		%p 
+			Hosted with
+			%a{:href => "https://www.heroku.com"} Heroku
+		%p 
+			Code on
+			%a{:href => "https://github.com/andrewjmonks/oblique-strategies-api"} Github
+	.twelve.columns.offset-by-one.content
+		%h1 Oblique Strategies JSON API
+		%p
+			This is a JSON API to deliver 
+			%a{:href => "http://en.wikipedia.org/wiki/Brian_Eno"} Brian Eno
+			and
+			%a{:href => "http://en.wikipedia.org/wiki/Peter_Schmidt_(artist)"} Peter Schmidt's
+			%a{:href => "http://en.wikipedia.org/wiki/Oblique_Strategies"} Oblique Strategies.
+		%h2 Example queries
+		%ul 
+			%li
+				%a{:href => "/all"} /all
+				&mdash; All cards.
+			%li
+				%a{:href => "/draw"} /draw
+				&mdash; Draw one card.
+			%li
+				%a{:href => "/edition/3/all"} /edition/3/all
+				&mdash; All third edition cards.
+			%li
+				%a{:href => "/edition/3/draw"} /edition/3/draw
+				&mdash; Draw one random third edition card.
+			%li
+				%a{:href => "/edition/3/cardnumber/5"} /edition/1/cardnumber/5
+				&mdash; First card from the first edition.
+			%li
+				%a{:href => "/id/9"} /id/9
+				&mdash; Card with id of 9.
