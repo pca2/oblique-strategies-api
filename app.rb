@@ -33,7 +33,7 @@ DataMapper.auto_upgrade!
 #   sass :style
 # end
 
-get '/' do
+get '/info' do
   # send_file './public/index.html'
   haml :index
 end
@@ -88,7 +88,7 @@ get '/draw' do
   @thing.to_json
 end
 
-get '/card' do
+get '/' do
   @things = Thing.all()
   @thing = @things.first(:offset => rand(@things.count))
 

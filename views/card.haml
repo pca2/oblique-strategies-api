@@ -1,8 +1,15 @@
 .container
 	.six.columns.offset-by-five
 		.card
-			%div 
-				%p 
+			%div
+				%p
 					= @thing.strategy
 	.six.columns.offset-by-five.footer
-		?
+		%p 
+			edition
+			= @thing.edition
+			card #
+			= @thing.cardnumber
+		%p 
+			%a{:href => "/info"} 
+				More information
